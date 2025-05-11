@@ -1,0 +1,76 @@
+:root {
+  --db-red: #e2001a;
+  --db-grey: #f2f2f2;
+  --db-dark: #222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: white;
+  color: var(--db-dark);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--db-red);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  padding: 3rem 2rem;
+  background-color: var(--db-grey);
+  text-align: center;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.info-box {
+  background-color: #fff;
+  border: 2px solid var(--db-red);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: var(--db-red);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
