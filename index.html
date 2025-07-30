@@ -2,50 +2,42 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Deutsche Bahn AG – Roblox</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DB Navigator Mini</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
-  <header>
-    <div class="logo">DB AG Roblox</div>
-    <nav>
-      <ul>
-        <li><a href="#">Startseite</a></li>
-        <li><a href="#">Fahrplan</a></li>
-        <li><a href="#">Abteilungen</a></li>
-        <li><a href="#">Bewerbung</a></li>
-        <li><a href="#">Kontakt</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="app">
+    <header>
+      <h1><i data-lucide="train-front"></i> DB Navigator</h1>
+    </header>
 
-  <main>
-    <section class="hero">
-      <h1>Willkommen bei der Deutschen Bahn Roblox</h1>
-      <p>Erlebe realistische Zugfahrten, Abteilungen und Teamarbeit im Roblox-Spiel.</p>
-    </section>
+    <main>
+      <div class="search-section">
+        <label for="from">Von</label>
+        <input type="text" id="from" placeholder="Startbahnhof" />
 
-    <section class="info-grid">
-      <div class="info-box">
-        <h2>Fahrplan</h2>
-        <p>Finde Zugverbindungen und Linienübersicht deiner Lieblingsstrecken.</p>
-      </div>
-      <div class="info-box">
-        <h2>Abteilungen</h2>
-        <p>Schließe dich als Lokführer, Zugbegleiter, oder Stellwerker an.</p>
-      </div>
-      <div class="info-box">
-        <h2>Bewerbung</h2>
-        <p>Werde Teil unseres Teams – ganz einfach über das Bewerbungsformular.</p>
-      </div>
-    </section>
-  </main>
+        <label for="to">Nach</label>
+        <input type="text" id="to" placeholder="Zielbahnhof" />
 
-  <footer>
-    <p>&copy; 2025 Deutsche Bahn AG – Roblox Community-Projekt</p>
-  </footer>
+        <button onclick="searchConnections()">
+          <i data-lucide="search"></i> Suchen
+        </button>
+      </div>
+
+      <div id="results" class="results"></div>
+    </main>
+
+    <footer>
+      <p>© Mini DB Navigator</p>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
