@@ -1,7 +1,43 @@
-<style>
-   h1 {
-      font-style: Ubunto, sans-serif;
-   }
-</style>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DB Navigator Mini</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1><i data-lucide="train-front"></i> DB Navigator</h1>
+    </header>
 
-<h1>Deutsche Bahn</h1>
+    <main>
+      <div class="search-section">
+        <label for="from">Von</label>
+        <input type="text" id="from" placeholder="Startbahnhof" />
+
+        <label for="to">Nach</label>
+        <input type="text" id="to" placeholder="Zielbahnhof" />
+
+        <button onclick="searchConnections()">
+          <i data-lucide="search"></i> Suchen
+        </button>
+      </div>
+
+      <div id="results" class="results"></div>
+    </main>
+
+    <footer>
+      <p>© Mini DB Navigator</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
